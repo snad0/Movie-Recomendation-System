@@ -1,6 +1,7 @@
 # Movie-Recomendation-System
 A ML project created on tkinter GUI
-enter director name
+
+Enter director name
 ![movie recomendation](https://user-images.githubusercontent.com/93977986/178018055-3a83815b-c275-49ae-8f05-11240990c724.png)
 
 
