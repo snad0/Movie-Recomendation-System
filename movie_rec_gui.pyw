@@ -24,8 +24,21 @@ def getval():
     #finding the close match for the movie name given by the user 
     Find_close_match = difflib.get_close_matches(movie_name, List_of_all_titles)
 
-    Close_match = Find_close_match[0]
-    print(f"Closest Match: {Close_match}")
+    if Find_close_match:
+        Close_match = Find_close_match[0]
+        print(f"Closest Match: {Close_match}")
+        Index_of_the_movie = movies_data[movies_data.title == Close_match]['index'].values[0]
+    else:
+        Find_close_match = difflib.get_close_matches(movie_name, List_of_all_genre)
+        if Find_close_match:
+            Close_match = Find_close_match[0]
+            print(f"Closest Match: {Close_match}")
+            Index_of_the_movie = movies_data[movies_data.genre == Close_match]['index'].values[0]
+        else:
+            Find_close_match = difflib.get_close_matches(movie_name, List_of_all_director)
+            Close_match = Find_close_match[0]
+            print(f"Closest Match: {Close_match}")
+            Index_of_the_movie = movies_data[movies_data.director == Close_match]['index'].values[0]
 
     #Find the index of movie from the title
     Index_of_the_movie = movies_data[movies_data.title == Close_match]['index'].values[0]
