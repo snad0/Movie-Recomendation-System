@@ -7,7 +7,7 @@ import sklearn.utils._typedefs
 from tkinter import *
 root =Tk()
 
-root.geometry("720x520")
+root.geometry("900x520")
 root.config(bg='black')
 root.title("Movie Recomendation System")
 bg= PhotoImage(file='12.png')
@@ -85,7 +85,7 @@ similarity = cosine_similarity(feature_vector)
 
 
 
-name = Label(root, text="Your Favourite Movie Name", bg="black", fg="white", padx=10, pady=10).pack(side="left" ,padx=5,pady=5)
+name = Label(root, text="Enter Your Favourite Movie Name/Genre/Director Name", bg="black", fg="white", padx=10, pady=10).pack(side="left" ,padx=5,pady=5)
 # name.grid(row=1,column=2)
 movie_name1 = StringVar()
 movie_Entry = Entry(root, textvariable=movie_name1,font=("comicsansns",10,"bold" ), borderwidth=3,relief=SUNKEN).pack(side="left" ,padx=10,pady=10)
